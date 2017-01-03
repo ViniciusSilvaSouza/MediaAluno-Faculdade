@@ -2,6 +2,7 @@
 #include<stdio.h>
 #include<locate.h>
 #include<conio.h>
+
 struct aluno{
 char nome[50], end[50], cep[8], tel[11], email[30], mat[20]
 }
@@ -9,10 +10,11 @@ main()
 {
 setLocate(LC_ALL, "Portuguese");
 struct aluno *aluno;
-int=0, cont=0, resp. *cadastro_info;
+int=0, cont=0, resp, *cadastro_info;
 print("Escolha uma das opções abaixo \n (1) Entrar com novos dados \n (2) Listar dados. \n (3) Sair\n\n")
-scanf("%d", &resp);
- //system("cls");
+scanf("%d", &resp); 
+ system("cls");
+ 
  while(resp!=3){
  switch(resp){
  case 1:
@@ -33,6 +35,7 @@ scanf("%d", &resp);
  scanf("%s", aluno[cont-1].email); // e-mail
  system("cls");
  break;
+ 
  case 2:
  for(i=0;i<cont;i++)
  {
@@ -44,11 +47,12 @@ scanf("%d", &resp);
  printf("E-mail: %s \n", aluno[i].email);
  }
  break;
+ 
  default:
  printf("Código invalido. Tente novamente.\n");
  break;
  }
- rint("Escolha uma das opções abaixo \n (1) Entrar com novos dados \n (2) Listar dados. \n (3) Sair\n\n")
+ print("Escolha uma das opções abaixo \n (1) Entrar com novos dados \n (2) Listar dados. \n (3) Sair\n\n")
 scanf("%d", &resp);
 }
 }
