@@ -1,4 +1,4 @@
-#include<stdlib.h>
+lude<stdlib.h>
 #include<stdio.h>
 #include<locate.h>
 #include<conio.h>
@@ -10,16 +10,20 @@ main()
 {
 setLocate(LC_ALL, "Portuguese");
 struct aluno *aluno;
-int=0, cont=0, resp, *cadastro_info;
-print("Escolha uma das opções abaixo \n (1) Entrar com novos dados \n (2) Listar dados. \n (3) Sair\n\n")
-scanf("%d", &resp); 
+int=0, cont=0, resp, *cadastro_info=NULL, *mais_cadastro;
+
+print("Escolha uma das opções abaixo \n //pergunta a ação a ser feita
+(1) Entrar com novos dados \n 
+(2) Listar dados. \n 
+(3) Sair\n\n") 
+scanf("%d", &resp); //Resposta da ação a ser feita
  system("cls");
  
  while(resp!=3){
  switch(resp){
  case 1:
  cont++;
- cadastro_info=(int*)realloc(cadastro, cont*sizeof(int);
+ cadastro_info=(int*)realloc(cadastro, cont*sizeof(int); //realloc pois já havia sido alocado NULL para cadastros
  printf("Cadasdo do Aluno\n\n");
  printf("Digite o nome\n"); // Nome do aluno
  fflush(stdin);
@@ -34,6 +38,14 @@ scanf("%d", &resp);
  printf("Digite o e-mail\n");
  scanf("%s", aluno[cont-1].email); // e-mail
  system("cls");
+ if(mais_cadastro!=NULL) {
+ cadastro_info=mais_cadastro;
+ cadastro[cont-1]=aluno;
+ }
+ else
+ {
+ free(cadastro_info); puts ("Erro ao (re)alocar memoria");
+ exit(1); //Abortar o pragrama e retorna 1 para o sistema operacional
  break;
  
  case 2:
@@ -54,5 +66,6 @@ scanf("%d", &resp);
  }
  print("Escolha uma das opções abaixo \n (1) Entrar com novos dados \n (2) Listar dados. \n (3) Sair\n\n")
 scanf("%d", &resp);
+system("cls");
 }
 }
