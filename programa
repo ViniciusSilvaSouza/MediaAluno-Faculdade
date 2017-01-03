@@ -1,0 +1,54 @@
+#include<stdlib.h>
+#include<stdio.h>
+#include<locate.h>
+#include<conio.h>
+struct aluno{
+char nome[50], end[50], cep[8], tel[11], email[30], mat[20]
+}
+main()
+{
+setLocate(LC_ALL, "Portuguese");
+struct aluno *aluno;
+int=0, cont=0, resp. *cadastro_info;
+print("Escolha uma das opções abaixo \n (1) Entrar com novos dados \n (2) Listar dados. \n (3) Sair\n\n")
+scanf("%d", &resp);
+ //system("cls");
+ while(resp!=3){
+ switch(resp){
+ case 1:
+ cont++;
+ cadastro_info=(int*)realloc(cadastro, cont*sizeof(int);
+ printf("Cadasdo do Aluno\n\n");
+ printf("Digite o nome\n"); // Nome do aluno
+ fflush(stdin);
+ gets(aluno[cont-1].nome);
+ printf("Digite a matricula\n"); //Endereço
+ scanf("%s", aluno[cont-1].end);
+ printf("Digite o endereço\n");
+ fflush(stdin);
+ gets(aluno[cont-1].mat); //Matricula
+ printf("Digite o telefone\n");
+ scanf("%s", aluno[cont-2].tel //telefone
+ printf("Digite o e-mail\n");
+ scanf("%s", aluno[cont-1].email); // e-mail
+ system("cls");
+ break;
+ case 2:
+ for(i=0;i<cont;i++)
+ {
+ printf("\n\n");
+ printf("Nome: %s \n", aluno[i].nome);
+ printf("Matricula: %s \n", aluno[i].mat);
+ printf("Endereço: %s \n", aluno[i].end);
+ printf("Telefone: %s \n", aluno[i].tel);
+ printf("E-mail: %s \n", aluno[i].email);
+ }
+ break;
+ default:
+ printf("Código invalido. Tente novamente.\n");
+ break;
+ }
+ rint("Escolha uma das opções abaixo \n (1) Entrar com novos dados \n (2) Listar dados. \n (3) Sair\n\n")
+scanf("%d", &resp);
+}
+}
